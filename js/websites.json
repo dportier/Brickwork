@@ -1,0 +1,14 @@
+mySites = {
+    "documentation":"list of websites",
+    "urls": [
+        { "value":"<h4>Pantheon</h4>Louis Wittenburg - Wordpress", "href":"https://dashboard.pantheon.io/sites/56882aa9-58ba-432d-b114-8afe545e1a2c", "class":"" },
+        { "value":"<h4>Pantheon</h4>They Design - Drupal 8", "href":"https://dashboard.pantheon.io/sites/8831c998-cbbc-468e-a081-32be3462b90c", "class":"grid-item--height3" },
+        { "value":"<h4>They Design</h4>Wordpress", "href":"http://www.p-brain.org/wordpress", "class":"" },
+        { "value":"<h4>P-Brain</h4>Drupal 8", "href":"http://www.p-brain.org/drupal", "class":"grid-item--height3" },
+        { "value":"<h4>P-Brain</h4>Wordpress", "href":"http://www.p-brain.org/wordpress", "class":"grid-item--height2" },
+        { "value":"<h4>Pantheon</h4>Dutch Dev Squad - Drupal 7", "href":"https://dev-ducthdevsquad.pantheonsite.io/user/register", "class":"grid-item--height3" },
+        { "value":"<h4>Drupal Broward User Group</h4>Relativity Project - Drupal 8", "href":"https://dev-relativity.pantheonsite.io/user/register", "class":"grid-item--height2" },
+        { "value":"<h4>Change Ahaed</h4>", "href":"http://change-ahead/basic/index.php/over-ons", "class":"" },
+        { "value":"", "href":"", "class":"" },
+    ]
+ }

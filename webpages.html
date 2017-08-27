@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]>
+<html class="ie" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js cookie_used_true">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/infinite-scroll.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+
+<script src="js/websites.json"></script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script>
+$(function() {
+ $('.container').infiniteScroll({
+  // options
+  path: '.pagination__next',
+  append: '.post',
+  history: false,
+ });
+
+ $('.grid').masonry({
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  gutter: '.gutter-sizer',
+  horizontalOrder: true, // new!
+  percentPosition: true,
+ });
+});
+</script>
+
+<script>
+var isHorOrder = true;
+
+function changeHorOrder() {
+  isHorOrder = !isHorOrder;
+  $('.grid').masonry({
+    horizontalOrder: isHorOrder
+  });
+}
+
+function addWebsites() {
+  var html='';
+  for (i in mySites.urls) {
+    if (mySites.urls[i].href.length > 0) {
+      html = '<div class="grid-item ' + mySites.urls[i].class + '"><a href="' + mySites.urls[i].href + '">' + mySites.urls[i].value + '</a></div>';
+      document.write(html);
+    }
+  }
+}
+</script>
+</head>
+<body>
+<div class="container>"
+<div class="row">
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="gutter-sizer"></div>
+
+  <script>
+  addWebsites();
+  </script>
+
+</div>
+<button onclick="changeHorOrder()">change</button>
+</div>
+</div>
+</body>
+</html>
