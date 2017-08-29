@@ -36,7 +36,6 @@ body {
   margin-bottom: 10px;
   padding-top: 0px;
   border-radius: 10px;
-  background-image: url('how-to-page-default.png');
 }
 
 .grid-item:before {
@@ -56,6 +55,11 @@ body {
 .grid-item--height3 {
   height: 160px;
   background: #EA0;
+}
+
+.grid-item--height4 {
+  height: 140px;
+  background-image: url('../img/how-to-page-default.png');
 }
 
 div {

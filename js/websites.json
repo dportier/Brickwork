@@ -12,6 +12,8 @@ mySites = {
         { "value":"<h4>Louis Wittenburg</h4>", "href":"http://www.louiswittenburg.nl", "class":"grid-item--height2" },
         { "value":"<h4>JQuery</h4>Shuffle", "href":"https://vestride.github.io/Shuffle/adding-removing", "class":"grid-item--height2" },
         { "value":"<h4>JQuery</h4>Infinite Scroll", "href":"https://infinite-scroll.com/demo/full-page/", "class":"grid-item--height2" },
+        { "value":"<h4>Heroku</h4>Brickwork", "href":"https://they-design-brickwork.herokuapp.com/", "class":"grid-item--height4" },
+        { "value":"<h4>Heroku</h4>Excel2HTML", "href":" https://excel2html.herokuapp.com/", "class":"grid-item--height4" },
         { "value":"", "href":"", "class":"" },
     ]
  }
