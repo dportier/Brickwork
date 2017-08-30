@@ -62,6 +62,11 @@ body {
   background-image: url('../img/how-to-page-default.png');
 }
 
+.grid-item--height5 {
+  height: 140px;
+  background-color: #ee90c7;
+}
+
 div {
   text-align: center;
 }
