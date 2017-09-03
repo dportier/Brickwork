@@ -67,6 +67,10 @@ body {
   background-color: #ee90c7;
 }
 
-div {
+.grid-item {
   text-align: center;
+}
+
+.list-group-item > span {
+  padding-left: 5px;
 }

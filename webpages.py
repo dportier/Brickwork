@@ -28,10 +28,14 @@ def get_resource(path):  # pragma: no cover
     complete_path = os.path.join(os.getcwd(), path)
     ext = os.path.splitext(path)[1]
     mimetype = mimetypes.get(ext, "text/html")
-    with open(complete_path, 'r') as content_file:
-        content = content_file.read()
-    #content = get_file(complete_path)
-    return Response(content, mimetype=mimetype)
+    try:
+        with open(complete_path, 'r') as content_file:
+            content = content_file.read()
+            #content = get_file(complete_path)
+
+        return Response(content, mimetype=mimetype)
+    except:
+        return render_template('error.html', errormessage=sys.exc_info())
 
 if __name__ == '__main__':
     app.debug=True
