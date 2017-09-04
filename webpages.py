@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, Response
+from flask import Flask, render_template, request, Response, send_file
 import numpy as np
 import pandas as pd
 import sys
@@ -20,6 +20,13 @@ def index():
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def get_resource(path):  # pragma: no cover
+	ext = path[-4:] 
+    if ext in ['.jpg', '.gif', '.png', '.bmp']:
+		try:
+			return send_file(filename, mimetype='image/'+ext)
+		except:
+			return render_template('error.html', errormessage=sys.exc_info())
+
     mimetypes = {
         ".css": "text/css",
         ".html": "text/html",
