@@ -23,7 +23,7 @@ def get_resource(path):  # pragma: no cover
     ext = path[-4:]
     if ext in ['.jpg', '.gif', '.png', '.bmp']:
         try:
-            return send_file(filename, mimetype='image/'+ext)
+            return send_file(path, mimetype='image/'+ext)
         except:
             return render_template('error.html', errormessage=sys.exc_info())
 
