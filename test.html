@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Demo</title>
+
+  <!-- jQuery / jQuery UI -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+  <!-- jQuery Touch Punch - Enable Touch Drag and Drop -->
+  <script src="js/jquery.touch-punch.min.js"></script>
+
+  <!-- jQuery.Shapeshift -->
+  <script src="js/jquery.shapeshift.js"></script>
+
+  <!-- CSS -->
+  <style>
+    .shapeshift {
+      border: 1px dashed #CCC;
+      position: relative;
+    }
+
+    .shapeshift > div {
+      background: #AAA;
+      position: absolute;
+      height: 100px;
+      width: 100px;
+    }
+
+    .shapeshift > .ss-placeholder-child {
+      background: transparent;
+      border: 1px dashed blue;
+    }
+
+    .shapeshift.containerLeft > div {
+      background: red;
+    }
+
+    .shapeshift.containerRight > div {
+      background: blue;
+    }
+
+    .shapeshift > div:nth-child(1) {
+      background-image: url('img/flower1.jpg');
+    }
+
+    .shapeshift.containerRight > div {
+      background-image: url('img/flower3.jpg');
+    }
+
+    .shapeshift > div {
+        counter-increment: ss-placeholder-child;
+    }
+
+    .shapeshift > div:before {
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      display: block;
+      padding: 0.4em;
+      content: counter(ss-placeholder-child);
+    }
+
+  </style>
+
+  <!-- Javascript -->
+  <script>
+    $(document).ready(function() {
+      var image=['img/flower1.jpg', 'img/flower2.jpg', 'img/flower3.jpg']
+      $(".containerLeft").shapeshift();
+      $(".containerRight").shapeshift();
+      $( ".shapeshift.containerRight div" ).each(function( index ) {
+        $( this ).css('background-image', 'url('+image[index % image.length]+')');
+
+        // alert( $( this ).css('background-image') );
+        // alert( image[index % image.length] );
+      });
+    })
+  </script>
+</head>
+<body>
+  <div class="shapeshift containerLeft">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="shapeshift containerRight">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
